@@ -1,39 +1,22 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Normal {
-    
+
     public static void main(String[] args) {
-        Person man  = new Person("Sarthak",19);
-        man.display();
+        ArrayList<Integer> array = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of values in this list: ");
+        int n  = sc.nextInt();
 
-        Person woman = new Person(man);
-        woman.display();
+        for(int i = 0 ; i < n ; ++i)
+        {
+            System.out.printf("Enter a[%d]: " , i + 1);
+            int a = sc.nextInt();
+            array.add(a);
+        }
+        System.out.println("The array is: " + array);
 
-        woman = new Person("Jane", 20);
-        woman.display();
-
-
-
-        
+        sc.close();
     }
 }
-
-class Person{
-    String name;
-    int age;
-
-    public Person(String name , int age){
-        this.name = name;
-        this.age = age;
-    }
-
-    //Copy
-
-    public Person(Person other){
-        this.name = other.name;
-        this.age = other.age;
-    }
-
-    public void display(){
-        System.out.println("Name: " + name + " Age: " + age);
-    }
-}
-
