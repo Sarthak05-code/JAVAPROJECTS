@@ -5,3 +5,9 @@
 //wap to count total odd number and even number in 2d array.> DONE
 
 // wap to display the sum of odd number in an 2d array. > DONE
+
+
+
+LAB WORK , 8 FEBRUARY
+
+// wap to 
