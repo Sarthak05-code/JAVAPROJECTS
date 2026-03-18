@@ -1,13 +1,5 @@
-// wap to initialize and display jagged array elements with sum of each row. > DONE
+wap to make a login form using grid layout 
 
-// wap to initalize and dispay 2d array elements with sum of each row. > DONE
-
-//wap to count total odd number and even number in 2d array.> DONE
-
-// wap to display the sum of odd number in an 2d array. > DONE
+februray 22 ; 
 
 
-
-LAB WORK , 8 FEBRUARY
-
-// wap to 

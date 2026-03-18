@@ -1,44 +1,18 @@
-
-import java.util.HashSet;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class App {
+
     public static void main(String[] args) {
-        HashSet<String> cities = new HashSet<>();
-        cities.add("London");
-        cities.add("NewYork");
-        cities.add("SanFrancisco");
-        cities.add("Beijing");
-        cities.add("NewYork");
-        cities.add("Kathmandu"); // -> New element
+        String url      = "jdbc:mysql://localhost:3306/College";
+        String user     = "root";
+        String password = "123456";
 
-        System.out.println("The size of the set is: " + cities.size()); // -> size
-
-        System.out.println("We will remove Beijing"); // -> remove
-        cities.remove("Beijing");
-        System.out.println("The new set " + cities);
-
-        System.out.println("Does the list contain Kathmandu?: "); // -> contains
-        if (cities.contains("Kathmandu"))
-            System.out.println("Yes , Kathmandu is present ");
-        else
-            System.out.println("No , kathmandu is not present");
-
-        HashSet<String> newCities = new HashSet<>(); // add all
-        newCities.add("New Mexico");
-        cities.addAll(newCities);
-        System.out.println("The new set is " + cities);
-
-        newCities.removeAll(newCities); // remove all
-        System.out.println("The set is " + newCities);
-
-        HashSet<String> retain = new HashSet<>(); // retain all
-        retain.add("Islambad");
-        retain.add("Copenhagen");
-        retain.add("NewYork");
-
-        cities.retainAll(retain);
-
-        System.out.println("The common value in the set is: " + cities);
-
+        try (Connection con = DriverManager.getConnection(url, user, password)) {
+            System.out.println("Connected Successfully");
+        } catch (SQLException e) {
+            System.out.println("Connection Failed: " + e.getMessage());
+        }
     }
 }
