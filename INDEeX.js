@@ -1,14 +1,22 @@
-function caller(num1) {
-    console.log("Hello from function. ");
+const fetchData = async () => {
+    const Data = await fetch('https://dummyjson.com/products')
+    const res = await Data.json()
+    const products = res.products
 
-    if(num1 % 2 == 0) {
-        console.log("This number print even: ");
-        
-    }else {
-        console.log("This number print odd");
-        
+    const tbody = document.querySelector('#dataFetcher tbody')
+    for(let i = 0 ; i < products.length ; ++i) {
+        const row = document.createElement('tr')
+        row.innerHTML = `
+            <td>${products[i].id}</td>
+            <td>${products[i].title}</td>
+            <td>${products[i].price}</td>
+            <td>${products[i].category}</td>
+            <td>${products[i].discountPercentage}</td>
+            <td>${products[i].stock}</td>
+
+        `
+        tbody.appendChild(row)
     }
-    
 }
 
-caller(2)
+fetchData()
