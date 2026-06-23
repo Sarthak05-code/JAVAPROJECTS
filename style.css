@@ -85,3 +85,10 @@ body {
 .cardRating::before {
     content: "★ ";
 }
+
+.cardPricing {
+    font-size: 15px;
+}
+.cardPricing::before {
+    content: "$";
+}
