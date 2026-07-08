@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <title>DOM Demo</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Result Management System</title>
 </head>
 <body>
+  <h2>Student Result Management System</h2>
 
-  <h1>String & DOM Demo</h1>
+  <form action="">
+    Name : <input type="text" id="studentName"><br><br>
 
-  <input type="text" id="nameInput" placeholder="Enter your name"/>
-  <br><br>
+    Subject 1 Marks: <input type="number" id="m1" onchange="revalidateMarks()"><br><br>
+    Subject 2 Marks: <input type="number" id="m2" onchange="revalidateMarks()"><br><br>
+    Subject 3 Marks: <input type="number" id="m3" onchange="revalidateMarks()"><br><br>
+    Subject 4 Marks: <input type="number" id="m4" onchange="revalidateMarks()"><br><br>
+    Subject 5 Marks: <input type="number" id="m5" onchange="revalidateMarks()"><br><br>
+ 
+    <button type="button" onclick="calculateResult()">Calculate</button>
 
-  <button onclick="greetUser()">Greet</button>
-  <button onclick="showConfirm()">Confirm</button>
-  <button onclick="showPrompt()">Prompt</button>
-
-  <p id="message"></p>
-
-  <script src="INDEXs.js"></script>
+    
+  </form>
+  <div class="resultSection" onmouseover="highlightResult()" onmouseout="unhighlightResult()">
+    <h3>Result</h3>
+    <p id="resultOutput">No Result Calculated.</p>
+  </div>
+  <script src="index.js"></script>
 </body>
 </html>
