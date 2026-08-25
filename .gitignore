@@ -3,14 +3,8 @@
 *.txt
 *.xls
 .clangd
-Zig/.zig-cache/z/78fbaead05ae1c40bdc548eeef967201
-Zig/.zig-cache/z/003bf991397e2be84d1fffb4925a3db6
-Zig/.zig-cache/z/729d07e1f3483b3741d0083f66977f2e
-Zig/.zig-cache/z/308932b88d6779aefc0c89835c787173
-Zig/.zig-cache/o/af520837fb7992007aa9cdfabf680b09/build.pdb
+Zig/.zig-cache
 Zig/src/root.zig
 Zig/build.zig
 Zig/build.zig.zon
-Zig/.zig-cache/h/timestamp
-Zig/.zig-cache/o/af520837fb7992007aa9cdfabf680b09/build_zcu.obj
-Zig/.zig-cache/o/a9cfc9d8fc3d796eec03d5c3167c0979/dependencies.zig
+
